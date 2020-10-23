@@ -74,11 +74,38 @@ $impiegati = [$roberto, $alex, $samuele];
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
     <title>oop extends</title>
   </head>
   <body>
 
-    
+    <h1 class="title">Softwares</h1>
+
+    <div class="wrapper">
+      <?php foreach ($softwares as $software): ?>
+        <div class="software">
+          <p><strong>Nome del Software: </strong><?php echo $software->nomeSoftware; ?></p>
+          <p><strong>Software House: </strong><?php echo $software->softwareHouse; ?></p>
+          <p><strong>Nazionalità: </strong><?php echo $software->nazione; ?></p>
+          <p><strong>Numero Impiegati: </strong><?php echo $software->numeroImpiegati; ?></p>
+        </div>
+      <?php endforeach; ?>
+    </div>
+
+    <h2 class="title f-s35">Impiegati</h2>
+
+    <div class="wrapper">
+      <?php foreach ($impiegati as $impiegato): ?>
+        <div class="impiegati">
+          <p><strong>Nome Impiegato: </strong><?php echo $impiegato->nome ?></p>
+          <p><strong>Cognome Impiegato: </strong><?php echo $impiegato->cognome ?></p>
+          <p><strong>Età Impiegato: </strong><?php echo $impiegato->eta ?></p>
+          <p><strong>Livello contratto: </strong><?php echo $impiegato->livello ?></p>
+          <p><strong>Anni di esperienza: </strong><?php echo $impiegato->anniEsperienza ?></p>
+          <p><strong>Azienda in cui lavora: </strong><?php echo $impiegato->softwareHouse ?></p>
+        </div>
+      <?php endforeach; ?>
+    </div>
 
   </body>
 </html>
